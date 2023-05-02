@@ -27,6 +27,7 @@ public class Proyecto {
     @NotNull
     private String imagen_proyecto;
     
+    @NotNull
     private String url_proyecto;
     
     @NotNull

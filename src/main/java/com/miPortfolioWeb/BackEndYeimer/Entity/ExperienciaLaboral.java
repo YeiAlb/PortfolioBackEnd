@@ -31,6 +31,9 @@ public class ExperienciaLaboral {
     private String url_empresa;
     
     @NotNull
+    private String cargo;
+    
+    @NotNull
     private String nombre_empresa;
     
     @Temporal(TemporalType.DATE)
@@ -47,9 +50,10 @@ public class ExperienciaLaboral {
     }
     
     //Constructor con parámetros.
-    public ExperienciaLaboral(String logo_empresarial, String url_empresa, String nombre_empresa, Date fecha_inicio, Date fecha_fin) {
+    public ExperienciaLaboral(String logo_empresarial, String url_empresa, String cargo, String nombre_empresa, Date fecha_inicio, Date fecha_fin) {
         this.logo_empresarial = logo_empresarial;
         this.url_empresa = url_empresa;
+        this.cargo = cargo;
         this.nombre_empresa = nombre_empresa;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
@@ -73,12 +77,20 @@ public class ExperienciaLaboral {
         this.logo_empresarial = logo_empresarial;
     }
 
-    public String getEmpresa_url() {
+    public String getUrl_empresa() {
         return url_empresa;
     }
 
-    public void setEmpresa_url(String url_empresa) {
+    public void setUrl_empresa(String url_empresa) {
         this.url_empresa = url_empresa;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
     public String getNombre_empresa() {
@@ -104,6 +116,4 @@ public class ExperienciaLaboral {
     public void setFecha_fin(Date fecha_fin) {
         this.fecha_fin = fecha_fin;
     }
-    
-    
 }
