@@ -55,7 +55,14 @@ public class SPersona {
         return persoRepository.findAll();
     }
     
-    
+    public Persona loginPersona(String correo, String clave) {
+        List <Persona> personas = persoRepository.findByCorreoAndClave(correo, clave);
+        
+        if(!personas.isEmpty()){
+            return personas.get(0);                        
+        }
+        return null;
+    }          
     //Lógica completa para llevar a cabo un ABML ó CRUD.
 
     /*public Persona loginPersona(String email, String clave) {

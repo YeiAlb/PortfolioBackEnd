@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 //Mapeamos con:
 
 @RestController
-@RequestMapping("/red") //localhost:8080/red --> Ruta para las Redes Sociales.
+@RequestMapping("red") //localhost:8080/red --> Ruta para las Redes Sociales.
 @CrossOrigin(origins = "http://localhost:4200") //Se cruza con Angular, el FrontEnd.
 
 public class CRedSocial {

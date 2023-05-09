@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 //Mapeamos con:
 
 @RestController
-@RequestMapping("/softSkill") //localhost:8080/soft --> Ruta de Soft Skills.
+@RequestMapping("softSkill") //localhost:8080/soft --> Ruta de Soft Skills.
 @CrossOrigin(origins = "http://localhost:4200") //Se cruza con Angular, el FrontEnd.
 
 

@@ -53,8 +53,8 @@ public class ExperienciaLaboral {
     public ExperienciaLaboral(String logo_empresarial, String url_empresa, String cargo, String nombre_empresa, Date fecha_inicio, Date fecha_fin) {
         this.logo_empresarial = logo_empresarial;
         this.url_empresa = url_empresa;
-        this.cargo = cargo;
         this.nombre_empresa = nombre_empresa;
+        this.cargo = cargo;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
     }

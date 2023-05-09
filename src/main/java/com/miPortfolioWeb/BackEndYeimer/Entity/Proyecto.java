@@ -1,10 +1,10 @@
 package com.miPortfolioWeb.BackEndYeimer.Entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -33,8 +33,8 @@ public class Proyecto {
     @NotNull
     private String titulo_proyecto;
     
-    //@Column(name = "descripcion", length = 5000)
-    @Lob //Annotation para textos largos.
+    //@Lob //Annotation para textos largos.
+    @Column(name = "descripcion", length = 5000)
     @NotNull
     @Size(min = 1, max = 5000, message = "No cumple con la longitud")
     private String descripcion;
@@ -93,8 +93,5 @@ public class Proyecto {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    
-    
-    
-    
+   
 }

@@ -1,10 +1,10 @@
 package com.miPortfolioWeb.BackEndYeimer.Entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -35,9 +35,9 @@ public class Persona {
     @NotNull
     @Size(min = 1, max = 50, message = "No cumple con la longitud")
     private String ocupacion;
-    
-    //@Column(name = "sobre_mi", length = 5000)
-    @Lob //Annotation para textos largos.
+        
+    //@Lob //Annotation para textos largos.
+    @Column(name = "sobre_mi", length = 5000)
     @NotNull
     @Size(min = 1, max = 5000, message = "No cumple con la longitud")
     private String sobre_mi;
@@ -47,9 +47,11 @@ public class Persona {
     private String img_perfil;
     
     @NotNull
-    @Size(min = 1, max = 100, message = "No cumple con la longitud")//Al menos una letra es obligatoria
-    private String img_banner;
+    private String correo;
     
+    @NotNull
+    private String clave;
+     
     
     //-------CONSTRUCTORES-------.
     //Contructor Vacío. (alt + insert)
@@ -57,14 +59,15 @@ public class Persona {
     }
     
     //Constructor con parámetros.
-    public Persona(int id, String nombre, String apellido, String ocupacion, String sobre_mi, String img_perfil, String img_banner) {
+    public Persona(int id, String nombre, String apellido, String ocupacion, String sobre_mi, String img_perfil, String correo, String clave) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.ocupacion = ocupacion;
         this.sobre_mi = sobre_mi;
         this.img_perfil = img_perfil;
-        this.img_banner = img_banner;
+        this.correo = correo;
+        this.clave = clave;
     }
     
     //-------GETTERS & SETTERS-------.
@@ -116,13 +119,21 @@ public class Persona {
     public void setImg_perfil(String img_perfil) {
         this.img_perfil = img_perfil;
     }
-
-    public String getImg_banner() {
-        return img_banner;
+    
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setImg_banner(String img_banner) {
-        this.img_banner = img_banner;
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+    
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
     }
     
 }

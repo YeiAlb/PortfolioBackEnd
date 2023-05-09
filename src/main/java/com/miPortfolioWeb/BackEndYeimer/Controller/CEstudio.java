@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 //Mapeamos con:
 
 @RestController
-@RequestMapping("/estudio") //localhost:8080/estudio --> Ruta de estudio.
+@RequestMapping("estudio") //localhost:8080/estudio --> Ruta de estudio.
 @CrossOrigin(origins = "http://localhost:4200") //Se cruza con Angular, el FrontEnd.
 
 public class CEstudio {

@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 //Mapeamos con:
 
 @RestController
-@RequestMapping("/hardSkill") //localhost:8080/hard --> Ruta de Hard Skills.
+@RequestMapping("hardSkill") //localhost:8080/hard --> Ruta de Hard Skills.
 @CrossOrigin(origins = "http://localhost:4200") //Se cruza con Angular, el FrontEnd.
 
 public class CHardSkill {

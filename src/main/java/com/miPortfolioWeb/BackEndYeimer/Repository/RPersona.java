@@ -1,6 +1,7 @@
 package com.miPortfolioWeb.BackEndYeimer.Repository;
 
 import com.miPortfolioWeb.BackEndYeimer.Entity.Persona;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -17,5 +18,5 @@ import org.springframework.stereotype.Repository;
 //Parámetros<clase (se importa), tipo de dato>
 
 public interface RPersona extends JpaRepository<Persona, Integer> {
-    
+   public List<Persona> findByCorreoAndClave(String correo, String clave); 
 }
