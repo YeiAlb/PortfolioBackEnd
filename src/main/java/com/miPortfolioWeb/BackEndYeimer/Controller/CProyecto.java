@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("proyecto") //localhost:8080/proyecto --> Ruta de Proyectos.
-@CrossOrigin(origins = "http://localhost:4200") //Se cruza con Angular, el FrontEnd.
+@CrossOrigin(origins = {"https://portfolio-frontend-yeimer.web.app"}) //Se cruza con Angular, el FrontEnd.
 
 public class CProyecto {
     @Autowired
