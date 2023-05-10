@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 //Aquí ---Capa Controladora Persona---, mapeamos con:
 
 @RestController
-@RequestMapping("persona") //localhost:8080/persona --> Ruta de persona.
+@RequestMapping("/persona") //localhost:8080/persona --> Ruta de persona.
 @CrossOrigin(origins = "http://localhost:4200") //Se cruza con Angular, el FrontEnd.
 
 public class CPersona {
@@ -35,7 +35,7 @@ public class CPersona {
     
         
         
-     @PostMapping ("/agregar") //Para guardar o crear a una NUEVA persona.
+    @PostMapping ("/agregar") //Para guardar o crear a una NUEVA persona.
     @ResponseBody //Se usa '@ResponseBody' porque el cuerpo de lo que está en este apartado, es la respuesta.
     //Con el '@RequestBody', (aliado del '@PostMapping') se envían los datos del FrontEnd al BackEnd.
     public String savePersona(@RequestBody Persona perso) {
