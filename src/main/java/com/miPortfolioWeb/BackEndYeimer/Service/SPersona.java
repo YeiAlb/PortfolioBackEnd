@@ -55,22 +55,24 @@ public class SPersona {
         return persoRepository.findAll();
     }
     
-    public Persona loginPersona(String correo, String clave) {
-        List <Persona> personas = persoRepository.findByCorreoAndClave(correo, clave);
+    public PersonaDTO loginPersona(String correo, String clave){
+	Persona persona = persoRepository.findByCorreoAndClave(correo, clave);
+	PersonaDTO personaDTO = new PersonaDTO(persona.getId(),
+                                            persona.getNombre(), 
+                                           persona.getApellido(), 
+                                          persona.getOcupacion(), 
+                                           persona.getSobre_mi(), 
+                                         persona.getImg_perfil());
+	return personaDTO;
+    }
+    
+    //public PersonaDTO loginPersona(String correo, String clave) {
+    //    List <Persona> personas = persoRepository.findByCorreoAndClave(correo, clave);
         
-        if(!personas.isEmpty()){
-            return personas.get(0);                        
-        }
-        return null;
-    }          
-    //Lógica completa para llevar a cabo un ABML ó CRUD.
-
-    /*public Persona loginPersona(String email, String clave) {
-        List <Persona> personas = persoRepo.findByEmailAndClave(email, clave);
-        if(!personas.isEmpty()){
-            return personas.get(0); //si la lista no esta vacía ,e devuelve la de la posición 0
-        }
-        return null;
-    }*/
+    //    if(!personas.isEmpty()){
+    //        return personas.get(0);                        
+    //    }
+    //    return null;
+    //}
     
 }

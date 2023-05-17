@@ -47,7 +47,7 @@ public class CRedSocial {
         return "La Red Social se ha eliminado correctamente";
     }
     
-    @PutMapping ("/editar") //Para editar a una red social y se usa el '@RequestBody' como parámetro.
+    @PutMapping ("/editar/{id}") //Para editar a una red social y se usa el '@RequestBody' como parámetro.
     public String updateRedSocial(@RequestBody RedSocial red) {
         redService.updateRedSocial(red);
         return "La Red Social se ha actualizado correctamente";

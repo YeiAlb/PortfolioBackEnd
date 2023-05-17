@@ -47,7 +47,7 @@ public class CProyecto {
         return "El Proyecto se ha eliminado correctamente";
     }
     
-    @PutMapping ("/editar") //Para editar a un proyecto y se usa el '@RequestBody' como parámetro.
+    @PutMapping ("/editar/{id}") //Para editar a un proyecto y se usa el '@RequestBody' como parámetro.
     public String updateProyecto(@RequestBody Proyecto proy) {
         proyService.updateProyecto(proy);
         return "El Proyecto se ha actualizado correctamente";

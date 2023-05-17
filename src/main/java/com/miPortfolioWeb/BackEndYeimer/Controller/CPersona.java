@@ -1,6 +1,7 @@
 package com.miPortfolioWeb.BackEndYeimer.Controller;
 
 import com.miPortfolioWeb.BackEndYeimer.Entity.Persona;
+import com.miPortfolioWeb.BackEndYeimer.Service.PersonaDTO;
 import com.miPortfolioWeb.BackEndYeimer.Service.SPersona;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +45,8 @@ public class CPersona {
     }
     
     @PostMapping ("/autenticacion/login")
-    public Persona loginPersona (@RequestBody Persona perso) {
+    //El login ya no devuelve Persona sino PersonaDTO.
+    public PersonaDTO loginPersona (@RequestBody Persona perso) {
         return persoService.loginPersona(perso.getCorreo(),perso.getClave());
     }
     
@@ -56,7 +58,7 @@ public class CPersona {
         return "La Persona se ha eliminado correctamente";
     }
     
-    @PutMapping ("/editar") //Para editar a una persona y se usa el '@RequestBody' como parámetro.
+    @PutMapping ("/editar/{id}") //Para editar a una persona y se usa el '@RequestBody' como parámetro.
     public String updatePersona(@RequestBody Persona perso) {
         persoService.updatePersona(perso);
         return "La Persona se ha actualizado correctamente";

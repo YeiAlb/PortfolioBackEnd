@@ -47,7 +47,7 @@ public class CHardSkill {
         return "La Hard Skill se ha eliminado correctamente";
     }
     
-    @PutMapping ("/editar") //Para editar a un Hard Skill y se usa el '@RequestBody' como parámetro.
+    @PutMapping ("/editar/{id}") //Para editar a un Hard Skill y se usa el '@RequestBody' como parámetro.
     public String updateHardSkill(@RequestBody HardSkill hard) {
         hardService.updateHardSkill(hard);
         return "La Hard Skill se ha actualizado correctamente";

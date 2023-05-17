@@ -45,7 +45,7 @@ public class CExperienciaLaboral {
         return "La Experiencia Laboral se ha eliminado correctamente";
     }
     
-    @PutMapping ("/editar") //Para editar a una experiencia laboral y se usa el '@RequestBody' como parámetro.
+    @PutMapping ("/editar/{id}") //Para editar a una experiencia laboral y se usa el '@RequestBody' como parámetro.
     public String updateExperienciaLaboral(@RequestBody ExperienciaLaboral expelab) {
         expeService.updateExperienciaLaboral(expelab);
         return "La Experiencia Laboral se ha actualizado correctamente";

@@ -5,6 +5,7 @@ com\miPortfolioWeb\BackEndYeimer\Controller\CEstudio.class
 com\miPortfolioWeb\BackEndYeimer\Service\SPersona.class
 com\miPortfolioWeb\BackEndYeimer\Repository\RPersona.class
 com\miPortfolioWeb\BackEndYeimer\Repository\RSoftSkill.class
+com\miPortfolioWeb\BackEndYeimer\Service\PersonaDTO.class
 com\miPortfolioWeb\BackEndYeimer\Repository\REstudio.class
 com\miPortfolioWeb\BackEndYeimer\Repository\RRedSocial.class
 com\miPortfolioWeb\BackEndYeimer\Entity\Proyecto.class

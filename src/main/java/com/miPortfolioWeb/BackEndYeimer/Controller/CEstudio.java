@@ -47,7 +47,7 @@ public class CEstudio {
         return "El Estudio se ha eliminado correctamente";
     }
     
-    @PutMapping ("/editar") //Para editar a un estudio y se usa el '@RequestBody' como parámetro.
+    @PutMapping ("/editar/{id}") //Para editar a un estudio y se usa el '@RequestBody' como parámetro.
     public String updateEstudio(@RequestBody Estudio est) {
         estService.updateEstudio(est);
         return "El Estudio se ha actualizado correctamente";

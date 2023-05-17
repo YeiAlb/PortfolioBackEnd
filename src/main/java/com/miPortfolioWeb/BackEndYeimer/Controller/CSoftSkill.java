@@ -47,7 +47,7 @@ public class CSoftSkill {
         return "La Soft Skill se ha eliminado correctamente";
     }
     
-    @PutMapping ("/editar") //Para editar a una Soft Skills y se usa el '@RequestBody' como parámetro.
+    @PutMapping ("/editar/{id}") //Para editar a una Soft Skills y se usa el '@RequestBody' como parámetro.
     public String updateSoftSkill(@RequestBody SoftSkill soft) {
         softService.updateSoftSkill(soft);
         return "La Soft Skill se ha actualizado correctamente";
